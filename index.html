@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Trip2Kerala Booking Confirmation Form</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+   </head>
+   <body>
+      <div data-ng-app="" data-ng-init="no=1;price=1500;total=0">
+         <div class="container">
+            <h2>Hotel reservation script free</h2>
+            <p> This registaration form is simple for the travel agents to prepare the booking confirmation for <a href="https://trip2kerala.com/place/kolukkumalai-sunrise-trek/">Kolukkumalai Tent Stay</a>
+            <form class="form-horizontal" action="register.php">
+               <div class="form-group">
+                  <label class="control-label col-sm-2" for="email">Name:</label>
+                  <div class="col-sm-3">
+                     <input type="text" class="form-control" id="i1" name="i1">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Phone:</label>
+                  <div class="col-sm-3">          
+                     <input type="text" class="form-control" id="i2" name="i2">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Check in Date:</label>
+                  <div class="col-sm-3">          
+                     <input type="date" class="form-control" id="i4" name="i4">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Check out Date:</label>
+                  <div class="col-sm-3">          
+                     <input type="date" class="form-control" id="i5" name="i5">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd" >No of Guests:</label>
+                  <div class="col-sm-3">          
+                     <input type="text" class="form-control" id="i3" name="i3" ng-model="no">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Per Head:</label>
+                  <div class="col-sm-3">          
+                     <input type="text" class="form-control" id="i9" name="i9" ng-model="price">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Total Amount:  </label>
+                  <div class="col-sm-3">          
+                     <input type="text" class="form-control" value="{{total = no * price}}">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Advance:</label>
+                  <div class="col-sm-3">          
+                     <input type="text" class="form-control" id="i7" name="i7" ng-model="advance">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Balance:</label>
+                  <div class="col-sm-3">          
+                     <input type="text" class="form-control" id="i8" name="i8" value="{{bal = total - advance}}" >
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Stay Type:</label>
+                  <div class="col-sm-3">          
+                     <input type="text" class="form-control" id="i10" name="i10">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Vegetarians:</label>
+                  <div class="col-sm-3">          
+                     <input type="text" class="form-control" id="i11" name="i11">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Travel Method:</label>
+                  <div class="col-sm-3">          
+                     <input type="text" class="form-control" id="i12" name="i12">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                     <button type="submit" class="btn btn-default">Submit</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </body>
+</html>
